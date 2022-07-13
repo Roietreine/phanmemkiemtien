@@ -6,6 +6,7 @@
     <string name="home">Trang chủ</string>
     <string name="introduction">Giới thiệu</string>
     <string name="privacy">Chính sách bảo mật</string>
+    <string name="no_internet_connection">No internet Connection</string>
 
 
 </resources>

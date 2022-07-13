@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/drawable/ic_no_internet.xml" value="0.1" />
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/layout/activity_jump.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/layout/activity_no_internet.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/layout/activity_splash.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/layout/activity_web_view.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/63968/AndroidStudioProjects/phanmemkiemtien/app/src/main/res/layout/custom_web_view.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/phanmemkiemtie/app/src/main/res/drawable/card_gradiant.xml" value="0.1705" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/phanmemkiemtie/app/src/main/res/drawable/home_icon.xml" value="0.197" />
         <entry key="..\:/Users/Richard/AndroidStudioProjects/phanmemkiemtie/app/src/main/res/drawable/introduction_icon.xml" value="0.197" />
