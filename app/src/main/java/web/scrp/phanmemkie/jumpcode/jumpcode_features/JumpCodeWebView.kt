@@ -2,7 +2,6 @@ package pblsh.pls.frlncrvtm.jumpcode_features
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -188,7 +187,6 @@ class JumpCodeWebView (context: Context, attrs: AttributeSet):  WebView(context,
                 val dialog = builder.create()
                 dialog.show()
             }
-
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 if (url.startsWith("http") || url.startsWith("https")) {
                     return super.shouldOverrideUrlLoading(view, url)
@@ -204,26 +202,21 @@ class JumpCodeWebView (context: Context, attrs: AttributeSet):  WebView(context,
                     } // showToast(url);
                     val newInt = Intent(Intent.ACTION_VIEW, Uri.parse(send))
                     context.startActivity(newInt)
-                } else {
-                    try {
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                        context.startActivity(intent)
-                    } catch (e: Exception) {
-                        when(e){
-                            is ActivityNotFoundException -> {
-                                val parsedUrl = Uri.parse(url)
-                                val newUri = Uri.parse(url.replace("${parsedUrl.scheme}://", "https://"))
-                                val intent = Intent(Intent.ACTION_VIEW, newUri)
-                                context.startActivity(intent)
-
-                            }
-                            else -> {
-                                Toast.makeText(context, "Jump failed", Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                    }
                 }
                 return true
+            }
+            private fun handleUrlException(url: String){
+                try {
+                    val parsedUrl = Uri.parse(url)
+                    val builder = Uri.Builder()
+                    builder.scheme("https")
+                    builder.authority(parsedUrl.authority)
+                    builder.path(parsedUrl.path)
+                    val intent = Intent(Intent.ACTION_VIEW, builder.build())
+                    context.startActivity(intent)
+                }catch(e: Exception){
+                    Toast.makeText(context,"Link failed", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 

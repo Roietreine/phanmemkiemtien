@@ -37,7 +37,7 @@ class Splash : AppCompatActivity() {
                 is UiState.Error -> errorHandling(state.exception.localizedMessage ?: "")
             }
         }
-        if (isNetworkConnected()) viewModel.getJumpUrl("123456")
+        if (isNetworkConnected()) viewModel.getJumpUrl(packageName)
         else toNoInternetActivity()
     }
 
